@@ -1,0 +1,459 @@
+.dashboard {
+  min-height: 100vh;
+  width: 100vw;
+  background: #f7f7f8;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  padding: 5.5rem 1rem 1rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #111111;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-shadow: none;
+}
+
+.veeamLogo {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.subtitle {
+  color: #222222;
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 300;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.statsOverview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 2px solid #ff6b1a;
+  text-align: left;
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.3rem;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: #c58062;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.controlsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.groupsViewButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  border: 2px solid #ff6b1a;
+  border-radius: 10px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.groupsViewButton:hover, .groupsViewButton:focus {
+  border: 2px solid #ff6b1a;
+  box-shadow: 0 0 0 2px #ff6b1a33;
+  background: #fff;
+  outline: none;
+  color: #111;
+}
+
+.refreshButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  border: 2px solid #ff6b1a;
+  border-radius: 10px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.refreshButton:hover, .refreshButton:focus {
+  border: 2px solid #ff6b1a;
+  box-shadow: 0 0 0 2px #ff6b1a33;
+  background: #fff;
+  outline: none;
+  color: #111;
+}
+
+.refreshButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+.refreshIcon {
+  font-size: 1rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.selectedDateSection {
+  margin-bottom: 2rem;
+}
+
+.selectedDateHeader {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.selectedDateTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.selectedDateStats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.statBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ffeee7;
+  color: #222;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.statIcon {
+  font-size: 1rem;
+}
+
+.groupsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: white;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: white;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.errorIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.errorTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.errorMessage {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.retryButton {
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #4c51bf;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.retryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.noDataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.noDataIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.noDataTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.noDataMessage {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.categoryButton {
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s;
+}
+
+.categoryButton.selected {
+  background: #ff6b1a;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .veeamLogo {
+    font-size: 2.2rem;
+  }
+  
+  .statsOverview {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .statCard {
+    padding: 1rem;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
+  }
+  
+  .controlsSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .buttonGroup {
+    justify-content: center;
+  }
+  
+  .selectedDateTitle {
+    font-size: 1.4rem;
+  }
+  
+  .selectedDateStats {
+    gap: 0.5rem;
+  }
+  
+  .statBadge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+:global(.dark) .dashboard {
+  background: #18191a;
+}
+:global(.dark) .headerContent,
+:global(.dark) .main {
+  background: transparent;
+}
+:global(.dark) .title {
+  color: #fff;
+}
+:global(.dark) .subtitle {
+  color: #cccccc;
+}
+:global(.dark) .statCard {
+  background: #232323;
+  border-color: #ff6b1a;
+}
+:global(.dark) .statNumber {
+  color: #fff;
+}
+:global(.dark) .statLabel {
+  color: #ffb088;
+}
+:global(.dark) .selectedDateHeader {
+  background: #232323;
+  border-color: #333;
+  color: #fff;
+}
+:global(.dark) .selectedDateTitle {
+  color: #fff;
+}
+:global(.dark) .statBadge {
+  background: #2a2a2a;
+  color: #fff;
+}
+:global(.dark) .groupSection {
+  background: #232323;
+  border-color: #ff6b1a;
+}
+:global(.dark) .groupHeader {
+  background: #232323;
+}
+:global(.dark) .expandIcon {
+  color: #fff;
+}
+:global(.dark) .itemsContainer {
+  background: transparent;
+}
+:global(.dark) .loadingContainer,
+:global(.dark) .errorContainer,
+:global(.dark) .noDataContainer {
+  color: #fff;
+}
+:global(.dark) .refreshButton,
+:global(.dark) .groupsViewButton {
+  background: #232323;
+  color: #fff;
+  border-color: #ff6b1a;
+}
+:global(.dark) .refreshButton:hover,
+:global(.dark) .groupsViewButton:hover {
+  background: #18191a;
+}

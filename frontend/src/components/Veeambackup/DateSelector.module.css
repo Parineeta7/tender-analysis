@@ -1,0 +1,66 @@
+.dateSelector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #db7b52;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.select {
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #111111;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  font-size: 0.9rem;
+}
+
+.select:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ff6b1a55;
+}
+
+@media (max-width: 768px) {
+  .dateSelector {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .select {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+:global(.dark) .dateSelector {
+  background: transparent;
+}
+:global(.dark) .label {
+  color: #ffb088;
+}
+:global(.dark) .select {
+  background: #232323;
+  color: #fff;
+  border-color: #444;
+}
+:global(.dark) .select:focus {
+  box-shadow: 0 0 0 3px #ff6b1a55;
+}

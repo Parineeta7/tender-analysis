@@ -1,0 +1,323 @@
+.tools {
+  width: 100vw;
+  flex: 1 0 auto;
+  padding: 2.5rem 0;
+  padding-top: calc(2.5rem + 80px);
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #111111;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.featuredSection {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333333;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.toolCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.toolCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.toolCard.featured {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #ff6b35;
+  padding: 0.7rem;
+}
+
+.toolIcon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  background: rgba(255, 107, 53, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolInfo {
+  flex: 1;
+}
+
+.toolCategory {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.toolTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+
+.toolDescription {
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.toolLink {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.toolLink:hover {
+  color: #e5512a;
+  text-decoration: underline;
+}
+
+.allToolsSection {
+  margin-top: 4rem;
+}
+
+.categoriesRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.categoriesNav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333333;
+}
+
+.categoryBtn:hover {
+  border-color: #ff6b35;
+  background: rgba(255, 107, 53, 0.05);
+  color: #333333;
+}
+
+.categoryBtn.active {
+  background: #ff6b35;
+  color: white;
+  border-color: #ff6b35;
+}
+
+.categoryBtn.active:hover {
+  background: #e5512a;
+  color: white;
+}
+
+.searchBarWrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 200px;
+  margin-bottom: 0;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.searchBar:focus {
+  border-color: #ff6b35;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Dark mode styles */
+:global(.dark) .tools {
+  background: #1a1a1a;
+}
+
+:global(.dark) .title {
+  color: #ffffff;
+}
+
+:global(.dark) .subtitle {
+  color: #cccccc;
+}
+
+:global(.dark) .sectionTitle {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+:global(.dark) .toolCard {
+  background: #2a2a2a;
+}
+
+:global(.dark) .toolCard.featured {
+  background: linear-gradient(135deg, #3a3a3a 0%, #4a4a4a 100%);
+  border-color: #ff6b35;
+}
+
+:global(.dark) .toolTitle {
+  color: #ffffff;
+}
+
+:global(.dark) .toolDescription {
+  color: #cccccc;
+}
+
+:global(.dark) .categoryBtn {
+  background: #3a3a3a;
+  border-color: #555555;
+  color: #ffffff;
+}
+
+:global(.dark) .categoryBtn:hover {
+  background: rgba(255, 107, 53, 0.1);
+  color: #ffffff;
+}
+
+:global(.dark) .categoryBtn.active {
+  background: #ff6b35;
+  color: white;
+}
+
+:global(.dark) .categoryBtn.active:hover {
+  background: #e5512a;
+  color: white;
+}
+
+:global(.dark) .searchBar {
+  background: #3a3a3a;
+  color: #fff;
+  border-color: #555555;
+}
+
+:global(.dark) .searchBar:focus {
+  border-color: #ff6b35;
+}
+
+@media (max-width: 900px) {
+  .categoriesRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .searchBarWrapper {
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .featuredGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .toolCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .toolIcon {
+    margin: 0 auto;
+  }
+  
+  .categoriesNav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .toolCard {
+    padding: 1.5rem;
+  }
+}

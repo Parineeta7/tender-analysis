@@ -1,0 +1,433 @@
+.groupsView {
+  min-height: 100vh;
+  width: 100vw;
+  background: #f7f7f8;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  padding: 5.5rem 1rem 1rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #ff6b1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.backButton:hover {
+  border: 1.5px solid #ff6b1a;
+  transform: translateY(-50%) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.backButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ff6b1a55;
+}
+
+.backIcon {
+  font-size: 1.2rem;
+}
+
+.title {
+  color: #111111;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-shadow: none;
+}
+
+.groupsIcon {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.subtitle {
+  color: #222222;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 300;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.statsOverview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 2px solid #ff6b1a;
+  text-align: left;
+  padding: 2rem 2rem 1.5rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #c58062;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.groupsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.groupCard {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 2px solid #ff6b1a;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.groupCard:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.groupHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.groupInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.groupName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.groupIcon {
+  font-size: 1.5rem;
+  color: #4c51bf;
+}
+
+.groupStats {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.statBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: #ffeee7;
+  color: #222;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.statIcon {
+  font-size: 0.9rem;
+}
+
+.vmsList {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.8rem;
+}
+
+.vmItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.vmItem:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.vmIcon {
+  font-size: 1.1rem;
+  color: #4c51bf;
+  flex-shrink: 0;
+}
+
+.vmName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1e293b;
+  word-break: break-word;
+}
+
+.loadingContainer,
+.errorContainer,
+.noDataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: white;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.errorIcon,
+.noDataIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.errorTitle,
+.noDataTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.errorMessage,
+.noDataMessage {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.5;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.categoryButton {
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s;
+}
+
+.categoryButton.selected {
+  background: #ff6b1a;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .groupsView {
+    padding: 0.5rem;
+  }
+  
+  .backButton {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+  
+  .backButton:hover {
+    transform: translateY(-2px);
+  }
+  
+  .headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .groupsIcon {
+    font-size: 2.2rem;
+  }
+  
+  .statsOverview {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .statCard {
+    padding: 1rem;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
+  }
+  
+  .groupInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .groupName {
+    font-size: 1.1rem;
+  }
+  
+  .vmsList {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .vmItem {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .vmName {
+    font-size: 0.85rem;
+  }
+}
+
+:global(.dark) .groupsView {
+  background: #18191a;
+}
+:global(.dark) .title {
+  color: #fff;
+}
+:global(.dark) .subtitle {
+  color: #cccccc;
+}
+:global(.dark) .statCard {
+  background: #232323;
+  border-color: #ff6b1a;
+}
+:global(.dark) .statNumber {
+  color: #fff;
+}
+:global(.dark) .statLabel {
+  color: #ffb088;
+}
+:global(.dark) .groupCard {
+  background: #232323;
+  border-color: #ff6b1a;
+}
+:global(.dark) .groupHeader {
+  background: #232323;
+}
+:global(.dark) .groupName {
+  color: #fff;
+}
+:global(.dark) .statBadge {
+  background: #2a2a2a;
+  color: #fff;
+}
+:global(.dark) .vmItem {
+  background: #232323;
+  color: #fff;
+}
+:global(.dark) .backButton {
+  background: #232323;
+  color: #ffb088;
+  border-color: #ff6b1a;
+}
+:global(.dark) .backButton:hover {
+  background: #18191a;
+}
+:global(.dark) .loadingContainer,
+:global(.dark) .errorContainer,
+:global(.dark) .noDataContainer {
+  color: #fff;
+}
+:global(.dark) .vmItem .vmName {
+  color: #fff;
+}

@@ -1,0 +1,172 @@
+.backupItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.backupItem:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.vmInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.vmIcon {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.vmDetails {
+  min-width: 0;
+  flex: 1;
+}
+
+.vmName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.vmTime {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0.2rem 0 0 0;
+}
+
+.fileCount {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin: 0.1rem 0 0 0;
+  font-style: italic;
+}
+
+.backupStatuses {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.backupStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.backupStatus.full {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.backupStatus.incremental {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.backupStatus.metadata {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.backupStatus.none {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.statusIcon {
+  font-size: 0.8rem;
+}
+
+.statusText {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .backupItem {
+    padding: 0.8rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .vmInfo {
+    width: 100%;
+  }
+  
+  .vmName {
+    font-size: 0.9rem;
+  }
+  
+  .vmTime {
+    font-size: 0.7rem;
+  }
+  
+  .fileCount {
+    font-size: 0.65rem;
+  }
+  
+  .backupStatuses {
+    align-self: flex-end;
+    gap: 0.3rem;
+  }
+  
+  .backupStatus {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+:global(.dark) .backupItem {
+  background: #232323;
+  border-color: #444;
+}
+:global(.dark) .vmName {
+  color: #fff;
+}
+:global(.dark) .vmTime,
+:global(.dark) .fileCount {
+  color: #bbb;
+}
+:global(.dark) .backupStatus.full {
+  background: #234d20;
+  color: #b6f7c1;
+}
+:global(.dark) .backupStatus.incremental {
+  background: #1e3a5c;
+  color: #a3d8ff;
+}
+:global(.dark) .backupStatus.metadata {
+  background: #5c4a1e;
+  color: #ffe6a3;
+}
+:global(.dark) .backupStatus.none {
+  background: #5c1e1e;
+  color: #ffb3b3;
+}

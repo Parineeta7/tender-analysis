@@ -1,0 +1,185 @@
+.groupSection {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border: 2px solid #ff6b1a;
+  overflow: hidden;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.groupSection:hover {
+  box-shadow: 0 8px 32px rgba(255, 107, 26, 0.10);
+  border-color: #ff6b1a;
+}
+
+.groupHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.2rem 1.2rem 2.2rem;
+  background: #fefaf8;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+  box-shadow: none;
+}
+
+.groupHeader:hover, .groupHeader:focus {
+  background: #fefaf8;
+  outline: none;
+  box-shadow: 0 0 0 2px #ff6b1a33;
+}
+
+.groupHeader.expanded {
+  background: #fefaf8;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.groupInfo {
+  flex: 1;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.groupIcon {
+  font-size: 1.5rem;
+  color: #4c51bf;
+}
+
+.groupName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.groupStats {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.statBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  background: #ffeee7;
+  color: #222;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.statIcon {
+  font-size: 0.8rem;
+}
+
+.expandIcon {
+  color: #64748b;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expandIcon.rotated {
+  transform: rotate(180deg);
+}
+
+.vmItems {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.vmItems.show {
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: max-height 0.5s ease-in;
+}
+
+.itemsContainer {
+  padding: 0 2.2rem 2rem 2.2rem;
+}
+
+/* Custom scrollbar for better UX */
+.vmItems::-webkit-scrollbar {
+  width: 8px;
+}
+
+.vmItems::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.vmItems::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.3);
+  border-radius: 4px;
+}
+
+.vmItems::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 126, 234, 0.5);
+}
+
+@media (max-width: 768px) {
+  .groupHeader {
+    padding: 1rem;
+  }
+  
+  .groupTitle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .groupName {
+    font-size: 1.1rem;
+  }
+  
+  .groupStats {
+    gap: 0.4rem;
+  }
+  
+  .statBadge {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+  
+  .itemsContainer {
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .vmItems.show {
+    max-height: 70vh;
+  }
+}
+
+:global(.dark) .groupSection {
+  background: #232323;
+  border-color: #ff6b1a;
+}
+:global(.dark) .groupHeader {
+  background: #232323;
+}
+:global(.dark) .groupName {
+  color: #fff;
+}
+:global(.dark) .statBadge {
+  background: #2a2a2a;
+  color: #fff;
+}
+:global(.dark) .expandIcon {
+  color: #fff;
+}

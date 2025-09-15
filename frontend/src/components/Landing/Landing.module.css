@@ -1,0 +1,291 @@
+.landing {
+  width: 100vw;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.heroSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+}
+
+.backgroundImage {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.heroText {
+  animation: fadeInUp 1s ease-out;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brandName {
+  color: #ff6b35;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.getStartedBtn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #ff6b35, #ff8f65);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.getStartedBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
+  background: linear-gradient(135deg, #e5512a, #ff6b35);
+}
+
+.quickAccessSection {
+  width: 100vw;
+  padding: 2.5rem 0; /* reduced from 6rem */
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* reduced from 1400px */
+  margin: 0 auto;
+  padding: 0 10px; /* reduced from 20px */
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem; /* reduced from 4rem */
+}
+
+.sectionTitle {
+  font-size: 2rem; /* reduced from 3rem */
+  font-weight: 800;
+  margin-bottom: 0.5rem; /* reduced from 1rem */
+  color: #333333;
+}
+
+.sectionSubtitle {
+  font-size: 1rem; /* reduced from 1.2rem */
+  color: #666666;
+  max-width: 500px; /* reduced from 600px */
+  margin: 0 auto;
+}
+
+.quickAccessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* reduced min width */
+  gap: 1rem; /* reduced from 2rem */
+  max-width: 900px; /* reduced from 1200px */
+  margin: 0 auto;
+}
+
+.accessCard {
+  background: white;
+  border-radius: 12px; /* reduced from 20px */
+  padding: 1.2rem; /* reduced from 2.5rem */
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* lighter shadow */
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.accessCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px; /* reduced from 4px */
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+}
+
+.accessCard:hover {
+  transform: translateY(-4px); /* reduced from -8px */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* lighter shadow */
+  border: none;
+}
+
+.accessCard:hover::before {
+  background: linear-gradient(90deg, #ff6b35, #ff8f65);
+}
+
+.cardIcon {
+  font-size: 2rem; /* reduced from 3.5rem */
+  margin-bottom: 0.7rem; /* reduced from 1.5rem */
+  display: block;
+  color: #ff6b35;
+}
+
+.cardTitle {
+  font-size: 1.1rem; /* reduced from 1.5rem */
+  font-weight: 700;
+  margin-bottom: 0.5rem; /* reduced from 1rem */
+  color: #333333;
+}
+
+.cardDescription {
+  color: #666666;
+  line-height: 1.4; /* reduced from 1.6 */
+  font-size: 0.92rem; /* reduced from 1rem */
+}
+
+/* Dark mode styles */
+:global(.dark) .quickAccessSection {
+  background: #1a1a1a;
+}
+
+:global(.dark) .sectionTitle {
+  color: #ffffff;
+}
+
+:global(.dark) .sectionSubtitle {
+  color: #cccccc;
+}
+
+:global(.dark) .accessCard {
+  background: #2a2a2a;
+  border: none;
+}
+
+:global(.dark) .cardTitle {
+  color: #ffffff;
+}
+
+:global(.dark) .cardDescription {
+  color: #cccccc;
+}
+
+:global(.dark) .accessCard:hover {
+  border: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .getStartedBtn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem; /* reduced from 2.5rem */
+  }
+  
+  .quickAccessGrid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem; /* reduced from 1.5rem */
+  }
+  
+  .accessCard {
+    padding: 1rem; /* reduced from 2rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem; /* reduced from 2rem */
+  }
+  
+  .accessCard {
+    padding: 0.7rem; /* reduced from 1.5rem */
+  }
+}
